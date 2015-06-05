@@ -18,7 +18,7 @@ RUN apt-get install -y oracle-java8-installer
 #setup the cloudera repo
 RUN wget http://archive.cloudera.com/cm5/ubuntu/trusty/amd64/cm/cloudera.list --output-document=/etc/apt/sources.list.d/cloudera.list
 RUN apt-get update
-RUN apt-get -y --force-yes install cloudera-manager-agent
+RUN apt-get -y --force-yes install cloudera-manager-agent cloudera-manager-daemons
 
 #make the directories
 RUN groupadd hadoop
