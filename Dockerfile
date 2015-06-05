@@ -20,10 +20,6 @@ RUN wget http://archive.cloudera.com/cm5/ubuntu/trusty/amd64/cm/cloudera.list --
 RUN apt-get update
 RUN apt-get -y --force-yes install cloudera-manager-agent cloudera-manager-daemons
 
-#make the directories
-RUN groupadd hadoop
-RUN useradd -g hadoop hdfs 
-
 RUN mkdir /var/cm
 RUN chmod -R 764 /var/cm
 
@@ -32,5 +28,4 @@ RUN chmod +x /root/start-base.sh
 
 EXPOSE 22 2181 7180 7182 50010 50075 50020 8020 50070 50090 8032 8030 8031 8033 8088 8888 8040 8042 8041 10020 19888 41370 38319 10000 21050 25000 25010 25020 18080 18081 7077 7078 9000 9001
 
-CMD /root/start.sh
-
+CMD /root/start-base.sh
