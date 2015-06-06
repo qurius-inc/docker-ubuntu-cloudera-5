@@ -7,7 +7,7 @@ RUN ntpdate pool.ntp.org
 
 #oracle java jdk8
 RUN apt-get update
-RUN apt-get install -y wget python
+RUN apt-get install -y wget python openssh-server openssh-client
 RUN apt-get install -y software-properties-common
 RUN add-apt-repository ppa:webupd8team/java
 RUN apt-get update
