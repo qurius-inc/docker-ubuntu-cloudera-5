@@ -19,6 +19,7 @@ RUN apt-get install -y oracle-java8-installer
 RUN wget http://archive.cloudera.com/cm5/ubuntu/trusty/amd64/cm/cloudera.list --output-document=/etc/apt/sources.list.d/cloudera.list
 RUN apt-get update
 RUN apt-get -y --force-yes install cloudera-manager-agent cloudera-manager-daemons
+RUN apt-get clean
 
 RUN mkdir /var/cm
 RUN chmod -R 764 /var/cm
